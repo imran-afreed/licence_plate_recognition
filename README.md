@@ -26,14 +26,13 @@ In this approach we first recognise license plate and use this to mark timestamp
   <img width="250" src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/no%20scaling%20adaptiveIHR%2096%20DA%202330:%0A%0C.png">
 </p>
   
-  hey bro these are important lines bro
+  So inorder to remove that unwanted border, countur detection was performed and the contour covering the most area was considered and a rectangular bounding box corresponding to this contour gives us exact part of license plate we want. Thus by cropping the image we will get a image as shown below.
   
     <p align="center">
-      <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/no_scaling_gray%0C.png" alt="Gray scaled" width="300">
-      <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/no%20scaling%20adaptiveIHR%2096%20DA%202330:%0A%0C.png" alt="binary image" width="300">
+      <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/cropped.png" alt="cropped image" width="250">
     </p>
   
-  So inorder to remove that unwanted border, countur detection was performed and the contour covering the most area was considered and a rectangular bounding box corresponding to this contour gives us exact part of license plate we want. Thus by cropping the image we will get a image as shown below.
+  
   
     <p align="center">
       <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/no%20scale%20font%20increased%20border%20-r%0C.png" alt="preprocessed" width="300">
