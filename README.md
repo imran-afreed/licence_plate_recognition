@@ -45,5 +45,5 @@ Code for this is in ![test.py](https://github.com/imran-afreed/licence_plate_rec
   
   #### Training chart:
 <p align="center">
-  <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/chart_yolov4.png" alt="preprocessed" width="300">
+  <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/chart_yolov4.png" alt="preprocessed" width="500">
 </p>
