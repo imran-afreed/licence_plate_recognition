@@ -44,4 +44,6 @@ Code for this is in ![test.py](https://github.com/imran-afreed/licence_plate_rec
   ![weights](https://drive.google.com/file/d/1ZwR7HqgEVr5Rx1iyusCpthaz9W4xZQrb/view?usp=sharing)
   
   #### Training chart:
-  ![Training chart](https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/chart_yolov4.png)
+<p align="center">
+  <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/chart_yolov4.png" alt="preprocessed" width="300">
+</p>
