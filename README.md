@@ -29,10 +29,6 @@ In this approach we first recognise license plate and use this to mark timestamp
   So inorder to remove that unwanted border, countur detection was performed and the contour covering the most area was considered and a rectangular bounding box corresponding to this contour gives us exact part of license plate we want. Thus by cropping the image we will get a image as shown below.
   
 <p align="center">
-  <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/cropped.png" alt="cropped image" width="250">
-</p>
-  
-<p align="center">
   <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/no%20scale%20font%20increased%20border%20-r%0C.png" alt="preprocessed" width="300">
 </p>
 
