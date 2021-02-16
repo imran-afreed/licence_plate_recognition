@@ -15,7 +15,7 @@ In this approach we first recognise license plate and use this to mark timestamp
   
   
   <p align="center">
-    <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/cropped.png" alt="vehicle pic" width="500">
+    <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/cropped.png" alt="vehicle pic" width="350">
   </p>
   
   But these images when fed to an OCR Engine(![PyTesseract](https://pypi.org/project/pytesseract/)) are not giving any text in return, scaling image, denoising etc didn't help. So converetd image into gray scale and performed OCR there was output but the edges were present in the image so they were aslo being recognized as some charecter so the output was not totally what is required, tried scaling, converting license plate into binary image, and this reduced errors but they were still present.
