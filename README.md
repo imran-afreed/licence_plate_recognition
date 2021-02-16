@@ -24,6 +24,7 @@ In this approach we first recognise license plate and use this to mark timestamp
       <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/cropped.png" alt="cropped image" width="350">
     </p>
   
+  hey bro these are important lines bro
   
     <p align="center">
       <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/no_scaling_gray%0C.png" alt="Gray scaled" width="300">
