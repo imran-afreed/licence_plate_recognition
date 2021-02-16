@@ -6,4 +6,4 @@ In this approach we first recognise license plate and use this to mark timestamp
 ## 1. License plate recognition
   
   To recognize license plates on vehilces, a camera will be used to take images like the one shown below
-  ![vehicle picture]()
+  ![vehicle picture](https://github.com/imran-afreed/licence_plate_recognition/blob/master/one.jpg)
