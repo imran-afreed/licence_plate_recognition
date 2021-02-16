@@ -21,9 +21,6 @@ In this approach we first recognise license plate and use this to mark timestamp
   
     <p align="center">
       <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/no_scaling_gray%0C.png" alt="Gray scaled" width="300">
-    </p>
-  
-    <p align="center">
       <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/no%20scaling%20adaptiveIHR%2096%20DA%202330:%0A%0C.png" alt="binary image" width="300">
     </p>
   
