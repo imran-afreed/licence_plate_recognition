@@ -37,3 +37,6 @@ In this approach we first recognise license plate and use this to mark timestamp
 Code for this is in ![test.py](https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/test.py) and is well commented.
 
 ### Training 
+  start by downloding these files/folders
+  ![darknet.zip](https://drive.google.com/file/d/1MJ3SAUATeJPNPx-eIp09OkDY_Go9G568/view?usp=sharing)
+  ![weights](https://drive.google.com/file/d/1ZwR7HqgEVr5Rx1iyusCpthaz9W4xZQrb/view?usp=sharing)
