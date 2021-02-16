@@ -34,3 +34,4 @@ In this approach we first recognise license plate and use this to mark timestamp
 
   Even this image was not giving output with PyTesseract, on scaling this image to x = 0.3 and y = 0.2 the desired output came. The scaling depends on image have but since in our application the camera and position of vehicle are almost the same every time, this shouldn't be a problem.
   
+Code for this is in ![test.py](https://github.com/imran-afreed/licence_plate_recognition/blob/master/test.py) and is well commented.
