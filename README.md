@@ -36,7 +36,7 @@ In this approach we first recognise license plate and use this to mark timestamp
   
   ![trial and errors performed](https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/flow_chart.png)
   
-Code for this is in [test.py](https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/test.py) and is well commented.
+Code for this is in [license_plate_recognition.py](https://github.com/imran-afreed/licence_plate_recognition/blob/master/licence_plate_recognition.py) and is well commented.
 
 ### Training 
   start by downloding these files/folders
