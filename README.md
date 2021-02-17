@@ -40,7 +40,9 @@ Code for this is in [license_plate_recognition.py](https://github.com/imran-afre
 
 ### Training 
   start by downloding these files/folders
+  
   [darknet.zip](https://drive.google.com/file/d/1MJ3SAUATeJPNPx-eIp09OkDY_Go9G568/view?usp=sharing)
+  
   [weights](https://drive.google.com/file/d/1ZwR7HqgEVr5Rx1iyusCpthaz9W4xZQrb/view?usp=sharing)
 
   Create a directorty named license in google drive and upload [darknet.zip](https://drive.google.com/file/d/1MJ3SAUATeJPNPx-eIp09OkDY_Go9G568/view?usp=sharing) in it. Now open [Train.ipynb](https://github.com/imran-afreed/licence_plate_recognition/blob/master/Train.ipynb) in [google colab](https://colab.research.google.com/drive/1p0Nf1tp5bg-2-AnltzYvM9TQ55lHqaFw?authuser=1#scrollTo=5dXbN2AWv3BX) and execute all cells
