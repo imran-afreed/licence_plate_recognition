@@ -21,12 +21,26 @@ I have used darknet to train YoLov4, [darknet](https://github.com/pjreddie/darkn
         
 <p align="center">
   <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/chart_yolov4.png" alt="Training chart" width="500">
-  
-  Loss chart
 </p>
-  
-  This image is fed to a Convolutional Neural Network(YoLo V4) which detects license plate in given image and outputs coordinates of bounding box in the image. These coordinates are used to crop input image to get license plate. Next step is to perform Optical Charecter Recognition on this license plate.
-  
+<p align="center">
+  Training loss chart
+</p>
+
+### Detection
+    to test the detection of license plate individually [detect.py](https://github.com/imran-afreed/licence_plate_recognition/blob/master/detect.py) can be used.
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   <p align="center">
     <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/cropped.png" alt="cropped image" width="250">
