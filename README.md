@@ -27,7 +27,7 @@ I have used darknet to train YoLov4, [darknet](https://github.com/pjreddie/darkn
 </p>
 
 ### Detection
-    to test the detection of license plate individually [detect.py](https://github.com/imran-afreed/licence_plate_recognition/blob/master/detect.py) can be used.
+to test the detection of license plate individually [detect.py](https://github.com/imran-afreed/licence_plate_recognition/blob/master/detect.py) can be used.
 
 
 
