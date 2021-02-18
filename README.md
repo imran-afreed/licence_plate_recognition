@@ -36,6 +36,7 @@ to test the detection of license plate individually [detect.py](https://github.c
   License plate cropped
 </p>
 
+[Trained weights](https://drive.google.com/file/d/1ZwR7HqgEVr5Rx1iyusCpthaz9W4xZQrb/view?usp=sharing)
 
 ### 3.pre processing image and OCR
 But this images when fed to an OCR Engine([PyTesseract](https://pypi.org/project/pytesseract/)) doesn't give any text in return, so converetd image into gray scale and performed OCR. This was giving output with some errors due to edges on right and left side of image. These were also recognized as some charecter by OCR engine as shown below 
