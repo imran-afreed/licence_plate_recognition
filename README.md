@@ -6,18 +6,18 @@ In this approach we first recognise license plate and use this to mark timestamp
 ## 1. License number recognition
   
   To recognize license number of vehilces, image of car with license plate in it will be used like the one shown below
-  ` 
+  
   <p align="center">
     <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/one.jpg" alt="vehicle pic" width="500">
   </p>
-  
+  ` 
   Using a Object detection Neural Network(YoLov4) license plate is identified and cropped out. Now the cropped image will be processed and sent to OCR engine([PyTesseract](https://pypi.org/project/pytesseract/)) which converts text in images to string.
   
-  ### 1. Training Neural Network 
+### 1. Training Neural Network 
         
-        I have used darknet to train YoLov4, [darknet](https://github.com/pjreddie/darknet) repository is cloned and dataset is loaded into data/obj folder in the darknet folder and is uploaded [here](https://drive.google.com/file/d/1MJ3SAUATeJPNPx-eIp09OkDY_Go9G568/view?usp=sharing). 
-        
-        To get started with training create a folder in google drive with name license_number_recognition and upload [darknet.zip](https://drive.google.com/file/d/1MJ3SAUATeJPNPx-eIp09OkDY_Go9G568/view?usp=sharing) in it. Now open [Train.ipynb](https://github.com/imran-afreed/licence_plate_recognition/blob/master/Train.ipynb) in [google colab]( colab.research.google.com) and exectue every cell. purpose of each cell is commented in the file itself. Once training is done the weights file is saved in backup directory inside the darknet directory on google drive.
+I have used darknet to train YoLov4, [darknet](https://github.com/pjreddie/darknet) repository is cloned and dataset is loaded into data/obj folder in the darknet folder and is uploaded [here](https://drive.google.com/file/d/1MJ3SAUATeJPNPx-eIp09OkDY_Go9G568/view?usp=sharing). 
+ 
+ To get started with training create a folder in google drive with name license_number_recognition and upload [darknet.zip](https://drive.google.com/file/d/1MJ3SAUATeJPNPx-eIp09OkDY_Go9G568/view?usp=sharing) in it. Now open [Train.ipynb](https://github.com/imran-afreed/licence_plate_recognition/blob/master/Train.ipynb) in [google colab]( colab.research.google.com) and exectue every cell. purpose of each cell is commented in the file itself. Once training is done the weights file is saved in backup directory inside the darknet directory on google drive.
         
 <p align="center">
   <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/chart_yolov4.png" alt="preprocessed" width="500">
