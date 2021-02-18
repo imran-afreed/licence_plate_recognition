@@ -11,7 +11,7 @@ In this approach we first recognise license plate and use this to mark timestamp
     <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/one.jpg" alt="vehicle pic" width="500">
   </p>
   ` 
- Using a Object detection Neural Network(YoLov4) license plate is identified and cropped out. Now the cropped image will be processed and sent to OCR engine([PyTesseract](https://pypi.org/project/pytesseract/)) which converts text in images to string.
+Using a Object detection Neural Network(YoLov4) license plate is identified and cropped out. Now the cropped image will be processed and sent to OCR engine([PyTesseract](https://pypi.org/project/pytesseract/)) which converts text in images to string.
   
 ### 1. Training Neural Network 
         
