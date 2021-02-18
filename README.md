@@ -11,7 +11,7 @@ In this approach we first recognise license plate and use this to mark timestamp
     <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/one.jpg" alt="vehicle pic" width="500">
   </p>
   ` 
-  Using a Object detection Neural Network(YoLov4) license plate is identified and cropped out. Now the cropped image will be processed and sent to OCR engine([PyTesseract](https://pypi.org/project/pytesseract/)) which converts text in images to string.
+ Using a Object detection Neural Network(YoLov4) license plate is identified and cropped out. Now the cropped image will be processed and sent to OCR engine([PyTesseract](https://pypi.org/project/pytesseract/)) which converts text in images to string.
   
 ### 1. Training Neural Network 
         
@@ -38,7 +38,7 @@ to test the detection of license plate individually [detect.py](https://github.c
 
 
 ### 3.pre processing image and OCR
-But this images when fed to an OCR Engine([PyTesseract](https://pypi.org/project/pytesseract/) doesn't give any text in return, so converetd image into gray scale and performed OCR. This was giving output with some errors due to edges on right and left side of image. These were also recognized as some charecter by OCR engine as shown below 
+But this images when fed to an OCR Engine([PyTesseract](https://pypi.org/project/pytesseract/)) doesn't give any text in return, so converetd image into gray scale and performed OCR. This was giving output with some errors due to edges on right and left side of image. These were also recognized as some charecter by OCR engine as shown below 
   
 <p align="center">
   <img width="250" src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/no_scaling_gray%0C.png">
