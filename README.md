@@ -39,8 +39,12 @@ to test the detection of license plate individually [detect.py](https://github.c
 [Trained weights](https://drive.google.com/file/d/1ZwR7HqgEVr5Rx1iyusCpthaz9W4xZQrb/view?usp=sharing)
 
 ### 3.pre processing image and OCR
-But this images when fed to an OCR Engine([PyTesseract](https://pypi.org/project/pytesseract/)) doesn't give any text in return, so converetd image into gray scale and performed OCR. This was giving output with some errors due to edges on right and left side of image. These were also recognized as some charecter by OCR engine as shown below 
-  
+But this images when fed to an OCR Engine([PyTesseract](https://pypi.org/project/pytesseract/)) doesn't give any text in return, so the license plate image has to be processed so that it can be processed by OCR engine
+
+Preprocessing include gray scaling image, detecting and cropping out border by drawing contours on image.
+
+The below shown is a gray sclaed version of license plate but due to the unwanted edges, extra charecters are deteted.
+
 <p align="center">
   <img width="250" src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/no_scaling_gray%0C.png">
 </p>
@@ -48,22 +52,20 @@ But this images when fed to an OCR Engine([PyTesseract](https://pypi.org/project
   Gray scale image and OCR output = " IHR 26 DA 2330 ."
 </p>
 
-Some gray scale license plates are not giving any output so converetd grayscales to binary images(only black and white) using adaptive threshold fucntion of OpenCV, and these were giving some output but the problem of border is still present
+Inorder to remove these boundaries, we need to know coordinates of them. This can be found by drawing contours on a black and white image generaeted from gray scale image. The bounding rectangle of largest contour area wise is what we want. Using those coordinates gray scale image is corpped and scaled. This is now loaded as input for PyTesseract which converts charecters in image into strings.
 
 <p align="center">
     <img width="250" src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/no%20scaling%20adaptiveIHR%2096%20DA%202330:%0A%0C.png">
 </p>
 <p align="center">
-  binary image and OCR output = " IHR 26 DA 2330 :"
+  Black and image generated from gray scaled license plate
 </p>
-
-Contour detection can be performed to detect the largest rectangle with no border in it and upon scaling to smaller size, we get desired output
   
 <p align="center">
   <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/no%20scale%20font%20increased%20border%20-r%0C.png" alt="preprocessed" width="300">
 </p>
 <p align="center">
-    border cropped and scaled, OCR output = " HR 26 DA 2330 "
+    Gray scale image after pre processing
 </p>
 
 
