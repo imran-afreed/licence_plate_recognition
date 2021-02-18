@@ -67,7 +67,7 @@ Contour detection can be performed to detect the largest rectangle with no borde
 
 
 <p align="center">
-  <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/flow_chart.png" alt="pre processing flow chart" width="300">
+  <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/flow_chart.png" alt="pre processing flow chart" width="600">
 </p>
 
 
