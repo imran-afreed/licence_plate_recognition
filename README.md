@@ -3,13 +3,25 @@
 The objective is to automatically recognize license number of vehicles entering and exiting a given place and keep track of them
 In this approach we first recognise license plate and use this to mark timestamps and how many times it has entered and exited a place
 
-## 1. License plate recognition
+## 1. License number recognition
   
-  To recognize license plates on vehilces, a camera will be used to take images like the one shown below
+  To recognize license number of vehilces, image of car with license plate in it will be used like the one shown below
   ` 
   <p align="center">
     <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/one.jpg" alt="vehicle pic" width="500">
   </p>
+  
+  Using a Object detection Neural Network(YoLov4) license plate is identified and cropped out. Now the cropped image will be processed and sent to OCR engine([PyTesseract](https://pypi.org/project/pytesseract/)) which converts text in images to string.
+  
+  ### 1. Training Neural Network 
+        
+        I have used darknet to train YoLov4, [darknet](https://github.com/pjreddie/darknet) repository is cloned and dataset is loaded into data/obj folder in the darknet folder and is uploaded [here](https://drive.google.com/file/d/1MJ3SAUATeJPNPx-eIp09OkDY_Go9G568/view?usp=sharing). 
+        
+        To get started with training create a folder in google drive with name license_number_recognition and upload [darknet.zip](https://drive.google.com/file/d/1MJ3SAUATeJPNPx-eIp09OkDY_Go9G568/view?usp=sharing) in it. Now open [Train.ipynb](https://github.com/imran-afreed/licence_plate_recognition/blob/master/Train.ipynb) in [google colab]( colab.research.google.com) and exectue every cell. purpose of each cell is commented in the file itself. Once training is done the weights file is saved in backup directory inside the darknet directory on google drive.
+        
+<p align="center">
+  <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/chart_yolov4.png" alt="preprocessed" width="500">
+</p>
   
   This image is fed to a Convolutional Neural Network(YoLo V4) which detects license plate in given image and outputs coordinates of bounding box in the image. These coordinates are used to crop input image to get license plate. Next step is to perform Optical Charecter Recognition on this license plate.
   
@@ -26,7 +38,7 @@ In this approach we first recognise license plate and use this to mark timestamp
   <img width="250" src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/no%20scaling%20adaptiveIHR%2096%20DA%202330:%0A%0C.png">
 </p>
   
-  So inorder to remove that unwanted border, countur detection was performed and the contour covering the most area was considered and a rectangular bounding box corresponding to this contour gives us exact part of license plate we want. Thus by cropping the image we will get a image as shown below.
+  So inorder to remove that unwanted border, countur detection was performed and the contour covering the most area was considered and a rectangular bounding box corresponding to this contour gives us exact part of plate we want. Thus by cropping the image we will get a image as shown below.
   
 <p align="center">
   <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/no%20scale%20font%20increased%20border%20-r%0C.png" alt="preprocessed" width="300">
