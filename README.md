@@ -65,4 +65,10 @@ Contour detection can be performed to detect the largest rectangle with no borde
     border cropped and scaled, OCR output = " HR 26 DA 2330 "
 </p>
 
+
+<p align="center">
+  <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/flow_chart.png" alt="pre processing flow chart" width="300">
+</p>
+
+
 [trial_and_error.py](https://github.com/imran-afreed/licence_plate_recognition/blob/master/trial_and_error.py) can be used to test and compare parameters used during preprocessing.
