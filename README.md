@@ -20,7 +20,8 @@ I have used darknet to train YoLov4, [darknet](https://github.com/pjreddie/darkn
  To get started with training create a folder in google drive with name license_number_recognition and upload [darknet.zip](https://drive.google.com/file/d/1MJ3SAUATeJPNPx-eIp09OkDY_Go9G568/view?usp=sharing) in it. Now open [Train.ipynb](https://github.com/imran-afreed/licence_plate_recognition/blob/master/Train.ipynb) in [google colab]( colab.research.google.com) and exectue every cell. purpose of each cell is commented in the file itself. Once training is done the weights file is saved in backup directory inside the darknet directory on google drive.
         
 <p align="center">
-  <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/chart_yolov4.png" alt="preprocessed" width="500">
+  <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/chart_yolov4.png" alt="Training chart" width="500">
+  Loss chart
 </p>
   
   This image is fed to a Convolutional Neural Network(YoLo V4) which detects license plate in given image and outputs coordinates of bounding box in the image. These coordinates are used to crop input image to get license plate. Next step is to perform Optical Charecter Recognition on this license plate.
