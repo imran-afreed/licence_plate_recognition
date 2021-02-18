@@ -73,3 +73,5 @@ Contour detection can be performed to detect the largest rectangle with no borde
 
 
 [trial_and_error.py](https://github.com/imran-afreed/licence_plate_recognition/blob/master/trial_and_error.py) can be used to test and compare parameters used during preprocessing.
+
+[This](https://drive.google.com/file/d/1MI1W6T3XxjEUJQ2puZniAdFmtYuUdSTt/view?usp=sharing) is explanation and demo video
