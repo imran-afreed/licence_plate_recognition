@@ -21,6 +21,7 @@ I have used darknet to train YoLov4, [darknet](https://github.com/pjreddie/darkn
         
 <p align="center">
   <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/chart_yolov4.png" alt="Training chart" width="500">
+  
   Loss chart
 </p>
   
