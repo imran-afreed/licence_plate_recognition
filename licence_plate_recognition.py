@@ -53,9 +53,10 @@ for i in range(len(boxes)):
     if i in indexes:
         x, y, w, h = boxes[i]
         tmp = img[y:y+h,x:x+w]
-        # cv2.rectangle(img, (x, y), (x + w, y + h), (20, 255, 10), 1)
+        cv2.rectangle(img, (x, y), (x + w, y + h), (20, 255, 10), 3)
+        # cv2.imwrite("bounding_box.png", img)
         tmp = cv2.resize(tmp, None, fx=2.5, fy=2.3)
-        cv2.imwrite('./cropped.png',tmp)
+        cv2.imwrite('cropped.png',tmp)
 
 
 crp = cv2.imread("cropped.png")
@@ -63,7 +64,8 @@ crp = cv2.resize(crp, None, fx=0.5, fy=0.35)
 
 #Gray scalling cropped.png
 gray = cv2.cvtColor(crp,cv2.COLOR_BGR2GRAY)
-cv2.imshow("gray scale image before cropping", gray)
+# cv2.imshow("gray scale image before cropping", gray)
+# cv2.imwrite("gray.png", gray)
 
 #converting gray scale image to binary
 adaptive_threshold = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 85, 0)
@@ -86,8 +88,8 @@ config = "--psm 3"
 text = pytesseract.image_to_string(gray, config=config, lang="eng")
 print("licence plate number detected is " + text)
 
-cv2.imwrite("gray.png", gray)
-cv2.imshow("final image used for OCR", gray)
+cv2.imwrite("final gray.png", gray)
+# cv2.imshow("final image used for OCR", gray)
 
 key = cv2.waitKey(0)  
 cv2.destroyAllWindows()
