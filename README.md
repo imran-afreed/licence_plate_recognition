@@ -55,14 +55,14 @@ The below shown is a gray sclaed version of license plate but due to the unwante
 Inorder to remove these boundaries, we need to know coordinates of them. This can be found by drawing contours on a black and white image generaeted from gray scale image. The bounding rectangle of largest contour area wise is what we want. Using those coordinates gray scale image is corpped and scaled. This is now loaded as input for PyTesseract which converts charecters in image into strings.
 
 <p align="center">
-    <img width="250" src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/no%20scaling%20adaptiveIHR%2096%20DA%202330:%0A%0C.png">
+    <img width="250" src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/adaptive.png">
 </p>
 <p align="center">
   Black and image generated from gray scaled license plate
 </p>
   
 <p align="center">
-  <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/no%20scale%20font%20increased%20border%20-r%0C.png" alt="preprocessed" width="300">
+  <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/final_gray.png" alt="preprocessed" width="300">
 </p>
 <p align="center">
     Gray scale image after pre processing
