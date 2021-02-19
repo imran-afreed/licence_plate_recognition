@@ -30,6 +30,7 @@ I have used darknet to train YoLov4, [darknet](https://github.com/pjreddie/darkn
 to test the detection of license plate individually [detect.py](https://github.com/imran-afreed/licence_plate_recognition/blob/master/detect.py) can be used. Open code in any editor and change the image path appropriately and run it, this shows and saves cropped image of license plate as cropped.png. 
 
 <p align="center">
+    <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/bounding_box.png" alt="cropped image" width = "400">
     <img src="https://github.com/imran-afreed/licence_plate_recognition/blob/master/images/cropped.png" alt="cropped image" width="250">
 </p>
 <p align="center">
