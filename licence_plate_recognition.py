@@ -58,47 +58,36 @@ for i in range(len(boxes)):
         cv2.imwrite('./cropped.png',tmp)
 
 
-#loading cropped license plate
-crp = cv2.imread("cropped.png") 
+crp = cv2.imread("cropped.png")
+crp = cv2.resize(crp, None, fx=0.5, fy=0.4)
 
-#converting cropped image to gray scale
-gray = cv2.cvtColor(crp,cv2.COLOR_BGR2GRAY) 
+#Gray scalling cropped.png
+gray = cv2.cvtColor(crp,cv2.COLOR_BGR2GRAY)
+cv2.imshow("gray scale image before cropping", gray)
 
-#generating binary image from gray scale image useing adaptive thereshold method
+#converting gray scale image to binary
 adaptive_threshold = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 85, 0)
 
-#generating contours to detect the unwanted border
-#uncomment the below comment to see contours
+#drawing contours
 count,_ = cv2.findContours(adaptive_threshold,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_NONE)
-count_img = cv2.drawContours(adaptive_threshold,count,-1,(255,0,0),2)
-# cv2.imshow(" all counts", count_img)
+count_img = cv2.drawContours(adaptive_threshold,count,-1,255,2)
 
-#index of countour with most area
+# count_img = adaptive_threshold
 c  = max(count, key = cv2.contourArea)
 
-#cooridnated of boudning box with maximum area
+#coordinates and dimensions of rectanagular bounding box
 x,y,w,h = cv2.boundingRect(c)
-# count_img = cv2.rectangle(adaptive_threshold,(x,y),(x+w,y+h),(0,255,0),2)
 
-#cropping
-count_img = count_img[y+2:y+h-1,x+9:x+w-5]
-
-#increasing font thickness
-kernel = np.ones((1,1),np.uint8)
-count_img = cv2.erode(count_img,kernel,iterations = 1)
-
-#saving final processed image
-cv2.imwrite("edges cropped.png",count_img)
-
-#scaling image before performing OCR
-count_img = cv2.resize(count_img,None, fx = 0.4, fy = 0.3)
+#cropping boundries
+gray = gray[y+1:y+h-1,x+1:x+w-1]
 
 
-#image is convereted into straing
 config = "--psm 3"
-text = pytesseract.image_to_string(count_img, config=config, lang="eng")
-print("lince number of current vehicle is " + text)
+text = pytesseract.image_to_string(gray, config=config, lang="eng")
+print("licence plate number detected is " + text)
 
+cv2.imwrite("gray.png", gray)
+cv2.imshow("final image used for OCR", gray)
 
 key = cv2.waitKey(0)  
 cv2.destroyAllWindows()

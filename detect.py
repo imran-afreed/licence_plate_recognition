@@ -13,7 +13,6 @@ net = cv2.dnn.readNet("yolov4_best.weights", "yolov4.cfg")
 # Name custom object
 classes = ["licence plate"]
 
-
 layer_names = net.getLayerNames()
 output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
 
