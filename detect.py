@@ -17,7 +17,7 @@ layer_names = net.getLayerNames()
 output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
 
 # Loading image, replace below address in cv2.imread() with your image_path
-img = cv2.imread('/home/imran_afreed/Desktop/licence_plate_recognition/images/two.jpeg')
+img = cv2.imread('/home/imran_afreed/Desktop/licence_plate_recognition/images/one.jpg')
 height, width, channels = img.shape
 
 # Detecting objects

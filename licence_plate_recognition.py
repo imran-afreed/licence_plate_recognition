@@ -18,7 +18,7 @@ layer_names = net.getLayerNames()
 output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
 
 # Loading image, replace below address in cv2.imread() with your image_path
-img = cv2.imread('/home/imran_afreed/Desktop/licence_plate_recognition/images/two.jpeg')
+img = cv2.imread('/home/imran_afreed/Desktop/licence_plate_recognition/images/one.jpg')
 height, width, channels = img.shape
 
 # Detecting objects
@@ -59,7 +59,7 @@ for i in range(len(boxes)):
 
 
 crp = cv2.imread("cropped.png")
-crp = cv2.resize(crp, None, fx=0.5, fy=0.4)
+crp = cv2.resize(crp, None, fx=0.5, fy=0.35)
 
 #Gray scalling cropped.png
 gray = cv2.cvtColor(crp,cv2.COLOR_BGR2GRAY)

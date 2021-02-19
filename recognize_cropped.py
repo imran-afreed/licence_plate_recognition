@@ -9,7 +9,7 @@ from PIL import Image
 
 
 crp = cv2.imread("cropped.png")
-crp = cv2.resize(crp, None, fx=0.5, fy=0.4)
+crp = cv2.resize(crp, None, fx=0.5, fy=0.35)
 
 #Gray scalling cropped.png
 gray = cv2.cvtColor(crp,cv2.COLOR_BGR2GRAY)
@@ -26,10 +26,10 @@ c  = max(count, key = cv2.contourArea)
 
 #coordinates and dimensions of rectanagular bounding box
 x,y,w,h = cv2.boundingRect(c)
+print(" height and width of image are "+str(h-2)+" and "+str(w-2)+" respectively")
 
 #cropping boundries
 gray = gray[y+1:y+h-1,x+1:x+w-1]
-
 
 config = "--psm 3"
 text = pytesseract.image_to_string(gray, config=config, lang="eng")
